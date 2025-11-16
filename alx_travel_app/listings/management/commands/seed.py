@@ -1,3 +1,9 @@
+$ python manage.py seed api --number=15
+$ python manage.py seed api --number=15 --seeder "MyModel.my_field" "1.1.1.1"
+seeder.add_entity(MyModel, 10, {
+    'my_field': '1.1.1.1',
+})
+
 from django_seed import Seed
 
 seeder = Seed.seeder()
